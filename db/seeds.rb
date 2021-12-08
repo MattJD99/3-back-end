@@ -33,16 +33,16 @@ Portfolio.create([
     {
         user_id: 1,
         coin_id: 3,
-        name_of_portfolio: "Matt's Portfolio",
+        # name_of_portfolio: "Matt's Portfolio",
         price_paid: 1.94,
-        profit_loss: 4.01
+        # profit_loss: 4.01
     },
     {
         user_id: 2,
         coin_id: 5,
-        name_of_portfolio: "Kimmy's Portfolio",
+        # name_of_portfolio: "Kimmy's Portfolio",
         price_paid: 1.94,
-        profit_loss: 0.01
+        # profit_loss: 0.01
     }
 ])
 

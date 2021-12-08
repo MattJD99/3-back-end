@@ -13,8 +13,9 @@ class ApplicationController < Sinatra::Base
   #portfolio routes
 
   get "/portfolios" do
-    portfolios = Portfolio.all
-    portfolios.to_json
+    # binding.pry
+    portfolio = Portfolio.all
+    portfolio.to_json
   end
 
   post "/portfolios" do
@@ -22,7 +23,7 @@ class ApplicationController < Sinatra::Base
     portfolioPost = Portfolio.create(
       coin: params[:coin],
       price: params[:price],
-      coin_id: params[:id],
+      coin_id: params[:coin_id],
       image: params[:image]
       # user_id: params[:user_id]
     )
