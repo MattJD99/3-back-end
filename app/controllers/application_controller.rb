@@ -12,29 +12,37 @@ class ApplicationController < Sinatra::Base
 
   #portfolio routes
 
-  get "/portfolios" do
+  get "/portfolio" do
     # binding.pry
     portfolio = Portfolio.all
     portfolio.to_json
   end
 
-  post "/portfolios" do
+  post "/portfolio" do
     # binding.pry 
     portfolioPost = Portfolio.create(
       coin: params[:coin],
       price: params[:price],
       coin_id: params[:coin_id],
-      image: params[:image]
-      # user_id: params[:user_id]
+      image: params[:image],
+      user_id: "Matt"
     )
     portfolioPost.to_json
   end
 
-  delete "/portfolios/:id" do
+  delete "/portfolio/:id" do
     # binding.pry
     portfolioRemove = Portfolio.find(params[:id])
     portfolioRemove.destroy
     portfolioRemove.to_json
+  end
+
+  patch "/portfolio/:id" do 
+    price_paid = Portfolio.find(params[:username])
+    price_paid.update(
+      price_paid: params[:price_paid]
+    )
+    price_paid.to_json
   end
 
   #user routes
