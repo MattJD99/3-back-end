@@ -49,13 +49,13 @@ Coin.create([
 ])
 
 Portfolio.create([
-    {
-        user_id: "Matt",
-    }
+    {user_id: "Matt"},
+    {user_id: "Kimmy"}
 ])
 
 User.create([
-    {username: "Matt"}
+    {username: "Matt"},
+    {username: "Kimmy"}
 ])
 
 puts "✅ Done seeding!"
