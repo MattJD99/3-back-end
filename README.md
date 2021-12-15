@@ -2,9 +2,10 @@ This repository contains the server side of my phase 3 project including the nec
 
 The corresponding repo containing the client side code can be found at https://github.com/MattJD99/3-front-end
 
-# 0. Clone the code locally to your machine and navigate to the newly cloned folder.
-# 1. in terminal run "bundle install"
-# 2. in terminal run "bundle exec rake server"
+# 1. Clone the code locally to your machine and navigate to the newly cloned folder.
+# 2. in terminal run "bundle install"
+# 3. in terminal run "bundle exec db:migrate db:seed"
+# 4. in terminal run "bundle exec rake server"
 
 There are three models in this application, a "portfolio", "coins, and "users".  The portfolio model creates a relationship between the coins and users.
 
