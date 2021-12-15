@@ -48,16 +48,23 @@ Coin.create([
       }
 ])
 
-Portfolio.create([
-    {user_id: "guest"},
-    {user_id: "Matt"},
-    {user_id: "Kimmy"}
-])
+# User.create([
+#   {username: "guest"},
+#   {username: "Matt"},
+#   {username: "Kimmy"}
+# ])
 
-User.create([
-    {username: "guest"},
-    {username: "Matt"},
-    {username: "Kimmy"}
+Portfolio.create([
+  {
+    id: 1,
+    coin_id: 1,
+    price_paid: 1400,
+    coin: "Bitcoin",
+    price: 50636,
+    image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
+  }
+  # {user_id: 2},
+  # {user_id: 3}
 ])
 
 puts "✅ Done seeding!"
