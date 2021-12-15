@@ -20,15 +20,14 @@ class ApplicationController < Sinatra::Base
   get "/portfolio" do
     portfolio = Portfolio.all
     portfolio.to_json
-    # binding.pry
   end
 
-  # get "/portfolio/:user_id" do 
-  #   portfolio = Portfolio.find(params[:user_id])
-  #   portfolio.to_json
-  # end
+  get "/portfolio/:user_id" do
+    userPortfolio = Portfolio.where("user_id = ?", params[:user_id])
+    userPortfolio.to_json
+  end
 
-  post "/portfolio" do
+  post "/portfolio/:user_id" do
     portfolioPost = Portfolio.create(
       coin: params[:coin],
       price: params[:price],
@@ -46,7 +45,6 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/portfolio/:user_id" do 
-    # binding.pry
     price_paid = Portfolio.find(params[:user_id])
     price_paid.update(
       price_paid: params[:price_paid]

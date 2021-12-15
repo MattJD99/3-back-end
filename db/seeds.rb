@@ -49,11 +49,13 @@ Coin.create([
 ])
 
 Portfolio.create([
+    {user_id: "guest"},
     {user_id: "Matt"},
     {user_id: "Kimmy"}
 ])
 
 User.create([
+    {username: "guest"},
     {username: "Matt"},
     {username: "Kimmy"}
 ])
