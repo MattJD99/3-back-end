@@ -31,9 +31,9 @@ class ApplicationController < Sinatra::Base
     portfolioPost = Portfolio.create(
       coin: params[:coin],
       price: params[:price],
-      coin_id: params[:coin_id],
+      # coin_id: params[:coin_id],
       image: params[:image],
-      user_id: params[:user_id]
+      # user_id: params[:user_id]
     )
     portfolioPost.to_json 
   end
