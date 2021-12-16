@@ -31,9 +31,8 @@ class ApplicationController < Sinatra::Base
     portfolioPost = Portfolio.create(
       coin: params[:coin],
       price: params[:price],
-      # coin_id: params[:coin_id],
       image: params[:image],
-      # user_id: params[:user_id]
+      # coin_id: params[:coin_id]
     )
     portfolioPost.to_json 
   end
@@ -52,16 +51,4 @@ class ApplicationController < Sinatra::Base
     price_paid.to_json
   end
 
-  #user routes
-
-  get "/users" do
-    users = User.all
-    users.to_json
-  end
-
-  get "/users/:username" do
-    user = User.all.find_by_username(params[:username])
-    user.to_json
-
-  end
 end
